@@ -4,10 +4,10 @@
         "supported": false,
         "healthy_error": null,
         "location": "/__w/charts/charts/community/planka/1.2.20",
-        "last_update": "2024-04-23 07:13:44",
+        "last_update": "2024-04-23 10:32:30",
         "required_features": [
-            "normalize/acl",
-            "normalize/ixVolume"
+            "normalize/ixVolume",
+            "normalize/acl"
         ],
         "human_version": "1.17.0_1.2.20",
         "version": "1.2.20",
