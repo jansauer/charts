@@ -6,8 +6,8 @@
         "location": "/__w/charts/charts/charts/minio/2.0.7",
         "last_update": "2024-04-23 10:34:21",
         "required_features": [
-            "normalize/acl",
             "normalize/ixVolume",
+            "normalize/acl",
             "definitions/certificate"
         ],
         "human_version": "2023-03-13_2.0.7",
