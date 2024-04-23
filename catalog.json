@@ -1,5 +1,42 @@
 {
     "charts": {
+        "traefik": {
+            "app_readme": "<p>def update_catalog_file(location: str) -&gt; None:\ncatalog_file_path = os.path.join(location, CACHED_CATALOG_FILE_NAME)\ncatalog_data, versions_data = get_trains(location)\nvalidate_train_data(catalog_data)\nvalidate_versions_data(versions_data)</p>",
+            "categories": [
+                "jansauer",
+                "traefik",
+                "ingress"
+            ],
+            "description": "Traefik is a flexible reverse proxy and Ingress Provider.",
+            "healthy": true,
+            "healthy_error": null,
+            "home": "https://traefik.io/",
+            "location": "/__w/charts/charts/charts/traefik",
+            "latest_version": "1.0.25",
+            "latest_app_version": "2.11.2",
+            "latest_human_version": "2.11.2_1.0.25",
+            "last_update": "2024-04-23 10:58:12",
+            "name": "traefik",
+            "recommended": false,
+            "title": "Traefik",
+            "maintainers": [
+                {
+                    "name": "Jan Sauer",
+                    "url": "https://jansauer.de/",
+                    "email": "jan@jansauer.de"
+                }
+            ],
+            "tags": [],
+            "screenshots": [],
+            "sources": [
+                "https://github.com/truecharts/charts/tree/master/charts/enterprise/traefik",
+                "https://github.com/traefik/traefik",
+                "https://github.com/traefik/traefik-helm-chart",
+                "https://traefik.io/",
+                "https://doc.traefik.io/traefik/"
+            ],
+            "icon_url": "https://truecharts.org/img/hotlink-ok/chart-icons/traefik.png"
+        },
         "prometheus": {
             "app_readme": "<h1>Prometheus</h1>\n<p><a href=\"https://prometheus.io/\">Prometheus</a> - Monitoring system and time series database.</p>\n<blockquote>\n<p>When application is installed, a container will be launched with <strong>root</strong> privileges.\nThis is required in order to apply the correct permissions to the <code>prometheus</code> directories.\nAfterward, the <code>prometheus</code> container will run as a <strong>non</strong>-root user (Default: <code>568</code>).\nAlso an empty configuration file will be created.</p>\n</blockquote>\n<p>The configuration file is located at <code>/config/prometheus.yml</code> inside the container.\nData is stored at <code>/data</code> inside the container.</p>",
             "categories": [
@@ -52,7 +89,7 @@
             "latest_version": "2.0.7",
             "latest_app_version": "2023-03-13",
             "latest_human_version": "2023-03-13_2.0.7",
-            "last_update": "2024-04-23 10:38:34",
+            "last_update": "2024-04-23 10:45:55",
             "name": "minio",
             "recommended": false,
             "title": "MinIO",

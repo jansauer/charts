@@ -1,0 +1,143 @@
+{
+    "1.0.25": {
+        "healthy": true,
+        "supported": true,
+        "healthy_error": null,
+        "location": "/__w/charts/charts/charts/traefik/1.0.25",
+        "last_update": "2024-04-23 10:58:12",
+        "required_features": [
+            "definitions/timezone"
+        ],
+        "human_version": "2.11.2_1.0.25",
+        "version": "1.0.25",
+        "chart_metadata": {
+            "apiVersion": "v2",
+            "type": "application",
+            "name": "traefik",
+            "version": "1.0.25",
+            "appVersion": "2.11.2",
+            "kubeVersion": ">=1.16.0-0",
+            "description": "Traefik is a flexible reverse proxy and Ingress Provider.",
+            "home": "https://traefik.io/",
+            "icon": "https://truecharts.org/img/hotlink-ok/chart-icons/traefik.png",
+            "maintainers": [
+                {
+                    "name": "Jan Sauer",
+                    "url": "https://jansauer.de/",
+                    "email": "jan@jansauer.de"
+                }
+            ],
+            "sources": [
+                "https://github.com/truecharts/charts/tree/master/charts/enterprise/traefik",
+                "https://github.com/traefik/traefik",
+                "https://github.com/traefik/traefik-helm-chart",
+                "https://traefik.io/",
+                "https://doc.traefik.io/traefik/"
+            ],
+            "keywords": [
+                "jansauer",
+                "traefik",
+                "ingress"
+            ]
+        },
+        "app_metadata": null,
+        "schema": {
+            "groups": [
+                {
+                    "name": "Traefik Configuration",
+                    "description": "Configure Traefik"
+                },
+                {
+                    "name": "ACME Configuration",
+                    "description": "Configure storage for Traefik"
+                },
+                {
+                    "name": "Network Configuration",
+                    "description": "Configure Network for Traefik"
+                }
+            ],
+            "portals": {
+                "open": {
+                    "protocols": [
+                        "http"
+                    ],
+                    "host": [
+                        "$node_ip"
+                    ],
+                    "ports": [
+                        "9000"
+                    ],
+                    "path": "/dashboard"
+                }
+            },
+            "questions": [
+                {
+                    "variable": "TZ",
+                    "group": "Traefik Configuration",
+                    "label": "Timezone",
+                    "schema": {
+                        "type": "string",
+                        "default": "America/Los_Angeles",
+                        "required": true,
+                        "$ref": [
+                            "definitions/timezone"
+                        ],
+                        "enum": [
+                            {
+                                "value": "Asia/Damascus",
+                                "description": "'Asia/Damascus' timezone"
+                            },
+                            {
+                                "value": "Asia/Saigon",
+                                "description": "'Asia/Saigon' timezone"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "variable": "acmeServiceAccount",
+                    "group": "ACME Configuration",
+                    "label": "Google Service Account",
+                    "description": "Google access credentials used to manag.\n",
+                    "schema": {
+                        "type": "string",
+                        "default": ""
+                    }
+                },
+                {
+                    "variable": "traefikNetwork",
+                    "group": "Network Configuration",
+                    "label": "",
+                    "schema": {
+                        "type": "dict",
+                        "attrs": [
+                            {
+                                "variable": "websecurePort",
+                                "label": "Websecure Port",
+                                "description": "Ports below 9000 will enable Host Network automatically.",
+                                "schema": {
+                                    "type": "int",
+                                    "default": 8443,
+                                    "required": true
+                                }
+                            },
+                            {
+                                "variable": "webPort",
+                                "label": "Web Port",
+                                "description": "Ports below 9000 will enable Host Network automatically.",
+                                "schema": {
+                                    "type": "int",
+                                    "default": 8080,
+                                    "required": true
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "app_readme": "<p>def update_catalog_file(location: str) -&gt; None:\ncatalog_file_path = os.path.join(location, CACHED_CATALOG_FILE_NAME)\ncatalog_data, versions_data = get_trains(location)\nvalidate_train_data(catalog_data)\nvalidate_versions_data(versions_data)</p>",
+        "detailed_readme": "<h1>Custom Traefik</h1>\n<p><a href=\"https://traefik.io/\">Traefik</a> is a modern HTTP reverse proxy and load balancer made to deploy microservices with ease.</p>",
+        "changelog": null
+    }
+}
