@@ -1,0 +1,89 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traefik
+  labels:
+    app: {{ template "fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: {{ .Release.Name | quote }}
+    heritage: {{ .Release.Service | quote }}
+    version: {{ .Chart.Version }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ template "fullname" . }}
+  template:
+    metadata:
+      labels:
+        provider: fabric8
+        app: {{ template "fullname" . }}
+        chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+        release: {{ .Release.Name | quote }}
+        heritage: {{ .Release.Service | quote }}
+    spec:
+      serviceAccountName: traefik
+      containers:
+        - name: traefik
+          image: 'traefik:v2.11.2'
+          args:
+            - "--global.checknewversion=false"
+            - "--global.sendanonymoususage=true"
+            - "--entryPoints.websecure.address=:8443/tcp"
+            - "--entryPoints.web.address=:8080/tcp"
+            - "--entryPoints.web.http.redirections.entrypoint.scheme=https"
+            - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
+            - "--entryPoints.traefik.address=:9000/tcp"
+            - --providers.kubernetescrd
+            - --providers.kubernetesingress
+            - "--api.insecure"
+            - "--ping"
+            - "--log.level=INFO"
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+          ports:
+            - name: websecure
+              containerPort: 8443
+            - name: web
+              containerPort: 8080
+            - name: traefik
+              containerPort: 9000
+          readinessProbe:
+            httpGet:
+              path: /ping
+              port: 9000
+            failureThreshold: 1
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 2
+          livenessProbe:
+            httpGet:
+              path: /ping
+              port: 9000
+            failureThreshold: 3
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 2
+          securityContext:
+            capabilities:
+              drop: [ALL]
+            readOnlyRootFilesystem: true
+            runAsGroup: 65532
+            runAsNonRoot: true
+            runAsUser: 65532
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "50Mi"
+            limits:
+              cpu: "300m"
+              memory: "150Mi"
+      securityContext:
+        fsGroup: 65532
+      volumes:
+        - name: tmp
+          emptyDir: {}

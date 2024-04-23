@@ -1,0 +1,60 @@
+groups:
+  - name: Traefik Configuration
+    description: Configure Traefik
+  - name: ACME Configuration
+    description: Configure storage for Traefik
+  - name: Network Configuration
+    description: Configure Network for Traefik
+
+portals:
+  open:
+    protocols:
+      - "http"
+    host:
+      - "$node_ip"
+    ports:
+      - "9000"
+    path: "/dashboard"
+
+
+questions:
+
+  - variable: TZ
+    group: Traefik Configuration
+    label: Timezone
+    schema:
+      type: string
+      default: Etc/UTC
+      required: true
+      $ref:
+        - definitions/timezone
+
+  - variable: acmeServiceAccount
+    group: ACME Configuration
+    label: Google Service Account
+    description: |
+      Google access credentials used to manag.
+    schema:
+      type: string
+      default: ""
+
+  - variable: traefikNetwork
+    group: Network Configuration
+    label: ""
+    schema:
+      type: dict
+      attrs:
+        - variable: websecurePort
+          label: Websecure Port
+          description: Ports below 9000 will enable Host Network automatically.
+          schema:
+            type: int
+            default: 8443
+            required: true
+        - variable: webPort
+          label: Web Port
+          description: Ports below 9000 will enable Host Network automatically.
+          schema:
+            type: int
+            default: 8080
+            required: true

@@ -2,7 +2,7 @@
 
 VERSION="v4.31.1"
 BINARY="yq_linux_amd64"
-YQ_PATH="$(pwd)/yq"
+YQ_PATH="/opt/homebrew/bin/yq"
 BASE_PATH="library/ix-dev"
 
 if [[ ! -f "$YQ_PATH" ]]; then
@@ -42,7 +42,7 @@ function copy_app() {
     mv "$train/$app/$version/values.yaml" "$train/$app/$version/ix_values.yaml"
 
     # Remove CI directory from the versioned app
-    rm -r "$train/$app/$version/ci"
+    #rm -r "$train/$app/$version/ci"
 
     # Grab icon and categories from Chart.yaml
     icon=$("$YQ_PATH" '.icon' "$BASE_PATH/$train/$app/Chart.yaml")
