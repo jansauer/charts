@@ -9,7 +9,7 @@ kind: ConfigMap
 metadata:
   name: portal
 data:
-  path: /
+  path: /test
   port: {{ .Values.minioNetwork.consolePort | quote }}
   protocol: {{ $proto }}
   host: "$node_ip"
