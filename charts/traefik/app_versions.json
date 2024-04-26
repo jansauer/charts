@@ -1,20 +1,20 @@
 {
-    "1.0.25": {
+    "1.0.26": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/truenas-apps/truenas-apps/charts/traefik/1.0.25",
-        "last_update": "2024-04-23 10:58:12",
+        "location": "/__w/truenas-apps/truenas-apps/charts/traefik/1.0.26",
+        "last_update": "2024-04-26 12:02:46",
         "required_features": [
             "definitions/timezone"
         ],
-        "human_version": "2.11.2_1.0.25",
-        "version": "1.0.25",
+        "human_version": "2.11.2_1.0.26",
+        "version": "1.0.26",
         "chart_metadata": {
             "apiVersion": "v2",
             "type": "application",
             "name": "traefik",
-            "version": "1.0.25",
+            "version": "1.0.26",
             "appVersion": "2.11.2",
             "kubeVersion": ">=1.16.0-0",
             "description": "Traefik is a flexible reverse proxy and Ingress Provider.",
@@ -112,22 +112,20 @@
                         "type": "dict",
                         "attrs": [
                             {
-                                "variable": "websecurePort",
-                                "label": "Websecure Port",
-                                "description": "Ports below 9000 will enable Host Network automatically.",
+                                "variable": "webPort",
+                                "label": "Web Port",
                                 "schema": {
                                     "type": "int",
-                                    "default": 8443,
+                                    "default": 80,
                                     "required": true
                                 }
                             },
                             {
-                                "variable": "webPort",
-                                "label": "Web Port",
-                                "description": "Ports below 9000 will enable Host Network automatically.",
+                                "variable": "websecurePort",
+                                "label": "Websecure Port",
                                 "schema": {
                                     "type": "int",
-                                    "default": 8080,
+                                    "default": 443,
                                     "required": true
                                 }
                             }
