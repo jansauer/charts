@@ -3,7 +3,7 @@
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/charts/charts/charts/traefik/1.0.25",
+        "location": "/__w/truenas-apps/truenas-apps/charts/traefik/1.0.25",
         "last_update": "2024-04-23 10:58:12",
         "required_features": [
             "definitions/timezone"

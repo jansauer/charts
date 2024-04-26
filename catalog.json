@@ -11,11 +11,11 @@
             "healthy": true,
             "healthy_error": null,
             "home": "https://traefik.io/",
-            "location": "/__w/charts/charts/charts/traefik",
+            "location": "/__w/truenas-apps/truenas-apps/charts/traefik",
             "latest_version": "1.0.25",
             "latest_app_version": "2.11.2",
             "latest_human_version": "2.11.2_1.0.25",
-            "last_update": "2024-04-23 10:58:12",
+            "last_update": "2024-04-23 10:59:42",
             "name": "traefik",
             "recommended": false,
             "title": "Traefik",
@@ -36,81 +36,6 @@
                 "https://doc.traefik.io/traefik/"
             ],
             "icon_url": "https://truecharts.org/img/hotlink-ok/chart-icons/traefik.png"
-        },
-        "prometheus": {
-            "app_readme": "<h1>Prometheus</h1>\n<p><a href=\"https://prometheus.io/\">Prometheus</a> - Monitoring system and time series database.</p>\n<blockquote>\n<p>When application is installed, a container will be launched with <strong>root</strong> privileges.\nThis is required in order to apply the correct permissions to the <code>prometheus</code> directories.\nAfterward, the <code>prometheus</code> container will run as a <strong>non</strong>-root user (Default: <code>568</code>).\nAlso an empty configuration file will be created.</p>\n</blockquote>\n<p>The configuration file is located at <code>/config/prometheus.yml</code> inside the container.\nData is stored at <code>/data</code> inside the container.</p>",
-            "categories": [
-                "monitoring"
-            ],
-            "description": "The Prometheus monitoring system and time series database.",
-            "healthy": true,
-            "healthy_error": null,
-            "home": "https://prometheus.io",
-            "location": "/__w/charts/charts/charts/prometheus",
-            "latest_version": "1.1.14",
-            "latest_app_version": "v2.51.2",
-            "latest_human_version": "v2.51.2_1.1.14",
-            "last_update": "2024-04-23 10:38:34",
-            "name": "prometheus",
-            "recommended": false,
-            "title": "Prometheus",
-            "maintainers": [
-                {
-                    "name": "truenas",
-                    "url": "https://www.truenas.com/",
-                    "email": "dev@ixsystems.com"
-                }
-            ],
-            "tags": [
-                "metrics",
-                "storage"
-            ],
-            "screenshots": [
-                "https://media.sys.truenas.net/apps/prometheus/screenshots/screenshot1.png"
-            ],
-            "sources": [
-                "https://github.com/prometheus/prometheus",
-                "https://github.com/truenas/charts/tree/master/charts/prometheus",
-                "https://prometheus.io"
-            ],
-            "icon_url": "https://media.sys.truenas.net/apps/prometheus/icons/icon.png"
-        },
-        "minio": {
-            "app_readme": "<h1>MinIO</h1>\n<p><a href=\"https://min.io\">MinIO</a> is a High Performance Object Storage released under Apache License v2.0. It is API compatible with Amazon S3 cloud storage service. Use MinIO to build high performance infrastructure for machine learning, analytics and application data workloads.</p>\n<p><strong>NOTE</strong></p>\n<ul>\n<li>On fresh installation, minIO data directory's ownership will be updated to minio:minio.</li>\n<li>For existing installations that are exhibiting the upgrade to &gt;=1.5.0, the minIO data directory's ownership will be migrated to minio:minio.</li>\n</ul>",
-            "categories": [
-                "storage",
-                "S3"
-            ],
-            "description": "High Performance, Kubernetes Native Object Storage",
-            "healthy": true,
-            "healthy_error": null,
-            "home": "https://min.io",
-            "location": "/__w/charts/charts/charts/minio",
-            "latest_version": "2.0.7",
-            "latest_app_version": "2023-03-13",
-            "latest_human_version": "2023-03-13_2.0.7",
-            "last_update": "2024-04-23 10:45:55",
-            "name": "minio",
-            "recommended": false,
-            "title": "MinIO",
-            "maintainers": [
-                {
-                    "name": "truenas",
-                    "url": "https://www.truenas.com/",
-                    "email": "dev@ixsystems.com"
-                }
-            ],
-            "tags": [],
-            "screenshots": [
-                "https://media.sys.truenas.net/apps/minio/screenshots/screenshot1.png",
-                "https://media.sys.truenas.net/apps/minio/screenshots/screenshot2.png",
-                "https://media.sys.truenas.net/apps/minio/screenshots/screenshot3.png"
-            ],
-            "sources": [
-                "https://github.com/minio/minio",
-                "https://github.com/minio/charts"
-            ],
-            "icon_url": "https://media.sys.truenas.net/apps/minio/icons/icon.png"
         }
     },
     "test": {}
