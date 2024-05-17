@@ -40,7 +40,12 @@ spec:
             - "--api.insecure"
             - "--ping"
             - "--log.level=INFO"
+          env:
+            - name: TEST_ACME
+              value: "{{ .Values.acmeStorageHostPath }}"
           volumeMounts:
+            - name: acme
+              mountPath: /acme
             - name: tmp
               mountPath: /tmp
           ports:
@@ -85,5 +90,9 @@ spec:
       securityContext:
         fsGroup: 65532
       volumes:
+        - name: acme
+          hostPath:
+            type: Directory
+            path: /mnt/applications/traefik
         - name: tmp
           emptyDir: {}
