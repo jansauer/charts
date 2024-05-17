@@ -102,6 +102,6 @@ spec:
         - name: acme
           hostPath:
             type: Directory
-            path: /mnt/applications/traefik
+            path: {{ .Values.acmeStorageHostPath }}
         - name: tmp
           emptyDir: {}
