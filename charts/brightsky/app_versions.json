@@ -1,20 +1,20 @@
 {
-    "0.0.5": {
+    "0.0.6": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/truenas-apps/truenas-apps/charts/brightsky/0.0.5",
-        "last_update": "2024-05-17 22:06:43",
+        "location": "/__w/truenas-apps/truenas-apps/charts/brightsky/0.0.6",
+        "last_update": "2024-05-17 22:48:25",
         "required_features": [
             "definitions/timezone"
         ],
-        "human_version": "2.1.9_0.0.5",
-        "version": "0.0.5",
+        "human_version": "2.1.9_0.0.6",
+        "version": "0.0.6",
         "chart_metadata": {
             "apiVersion": "v2",
             "type": "application",
             "name": "brightsky",
-            "version": "0.0.5",
+            "version": "0.0.6",
             "appVersion": "2.1.9",
             "kubeVersion": ">=1.16.0-0",
             "description": "Bright Sky is an open-source api for weather information.",
@@ -64,6 +64,26 @@
             },
             "questions": [
                 {
+                    "variable": "minDate",
+                    "group": "Bright Sky Configuration",
+                    "label": "Minimal Date",
+                    "schema": {
+                        "type": "string",
+                        "default": "2018-01-01",
+                        "required": true
+                    }
+                },
+                {
+                    "variable": "pollingInterval",
+                    "group": "Bright Sky Configuration",
+                    "label": "Crontab Polling Interval",
+                    "schema": {
+                        "type": "string",
+                        "default": "*/10",
+                        "required": true
+                    }
+                },
+                {
                     "variable": "TZ",
                     "group": "Bright Sky Configuration",
                     "label": "Timezone",
@@ -89,7 +109,7 @@
                 {
                     "variable": "postgres",
                     "group": "Storage Configuration",
-                    "label": "Postgres",
+                    "label": "",
                     "schema": {
                         "type": "dict",
                         "attrs": [
