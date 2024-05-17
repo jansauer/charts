@@ -1,12 +1,12 @@
 apiVersion: v2
 type: application
 name: grafana
-version: 0.0.1
+version: 0.0.2
 appVersion: "3.0.0"
 kubeVersion: '>=1.16.0-0'
 description: Grafana is a analytics and monitoring platform.
-home: https://traefik.io/
-icon: https://truecharts.org/img/hotlink-ok/chart-icons/traefik.png
+home: https://grafana.com/oss/grafana/
+icon: https://truecharts.org/img/hotlink-ok/chart-icons/grafana.webp
 maintainers:
   - name: Jan Sauer
     url: https://jansauer.de/
@@ -19,5 +19,4 @@ sources:
   - https://doc.traefik.io/traefik/
 keywords:
   - jansauer
-  - traefik
-  - ingress
+  - monitoring
