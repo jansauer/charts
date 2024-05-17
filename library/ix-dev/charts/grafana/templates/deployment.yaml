@@ -77,7 +77,7 @@ spec:
       securityContext:
         fsGroup: 472
       volumes:
-        - name: acme
+        - name: data
           hostPath:
             type: Directory
             path: "{{ .Values.grafanaStorage.dataHostPath }}"

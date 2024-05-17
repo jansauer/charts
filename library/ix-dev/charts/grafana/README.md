@@ -1,3 +1,3 @@
-# Custom Traefik
+# Custom Grafana
 
-[Traefik](https://traefik.io/) is a modern HTTP reverse proxy and load balancer made to deploy microservices with ease.
+[Grafana](https://grafana.com/oss/grafana/) is an open-source analytics and monitoring platform that allows users to visualize and analyze data from various sources through customizable dashboards.

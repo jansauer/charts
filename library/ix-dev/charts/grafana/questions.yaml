@@ -1,8 +1,8 @@
 groups:
   - name: Traefik Configuration
     description: Configure Traefik
-  - name: Network Configuration
-    description: Configure Network for Grafana
+  - name: Storage Configuration
+    description: Configure Storage for Grafana
 
 portals:
   open:
@@ -27,7 +27,7 @@ questions:
         - definitions/timezone
 
   - variable: grafanaStorage
-    group: Network Configuration
+    group: Storage Configuration
     label: ""
     schema:
       type: dict
