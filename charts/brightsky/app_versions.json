@@ -1,0 +1,95 @@
+{
+    "0.0.1": {
+        "healthy": true,
+        "supported": true,
+        "healthy_error": null,
+        "location": "/__w/truenas-apps/truenas-apps/charts/brightsky/0.0.1",
+        "last_update": "2024-05-17 20:34:05",
+        "required_features": [
+            "definitions/timezone"
+        ],
+        "human_version": "2.1.9_0.0.1",
+        "version": "0.0.1",
+        "chart_metadata": {
+            "apiVersion": "v2",
+            "type": "application",
+            "name": "brightsky",
+            "version": "0.0.1",
+            "appVersion": "2.1.9",
+            "kubeVersion": ">=1.16.0-0",
+            "description": "Bright Sky is an open-source api for weather information.",
+            "home": "https://brightsky.dev/",
+            "icon": "https://brightsky.dev/favicon.svg",
+            "maintainers": [
+                {
+                    "name": "Jan Sauer",
+                    "url": "https://jansauer.de/",
+                    "email": "jan@jansauer.de"
+                }
+            ],
+            "sources": [
+                "https://github.com/jdemaeyer/brightsky/",
+                "https://github.com/jdemaeyer/brightsky-infrastructure/"
+            ],
+            "keywords": [
+                "jansauer",
+                "opendata"
+            ]
+        },
+        "app_metadata": null,
+        "schema": {
+            "groups": [
+                {
+                    "name": "Bright Sky Configuration",
+                    "description": "Configure Bright Sky"
+                },
+                {
+                    "name": "Storage Configuration",
+                    "description": "Configure Storage for Bright Sky"
+                }
+            ],
+            "portals": {
+                "open": {
+                    "protocols": [
+                        "http"
+                    ],
+                    "host": [
+                        "$node_ip"
+                    ],
+                    "ports": [
+                        "9000"
+                    ],
+                    "path": "/dashboard"
+                }
+            },
+            "questions": [
+                {
+                    "variable": "TZ",
+                    "group": "Bright Sky Configuration",
+                    "label": "Timezone",
+                    "schema": {
+                        "type": "string",
+                        "default": "America/Los_Angeles",
+                        "required": true,
+                        "$ref": [
+                            "definitions/timezone"
+                        ],
+                        "enum": [
+                            {
+                                "value": "Asia/Damascus",
+                                "description": "'Asia/Damascus' timezone"
+                            },
+                            {
+                                "value": "Asia/Saigon",
+                                "description": "'Asia/Saigon' timezone"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "app_readme": "<p><a href=\"https://brightsky.dev/\">Bright Sky</a> is an open-source API that provides easy access to weather data from the Deutscher Wetterdienst (DWD).</p>",
+        "detailed_readme": "<h1>Bright Sky</h1>\n<p><a href=\"https://brightsky.dev/\">Bright Sky</a> is an open-source API that provides easy access to weather data from the Deutscher Wetterdienst (DWD).</p>",
+        "changelog": null
+    }
+}

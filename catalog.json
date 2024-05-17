@@ -13,7 +13,7 @@
             "latest_version": "1.0.38",
             "latest_app_version": "3.0.0",
             "latest_human_version": "3.0.0_1.0.38",
-            "last_update": "2024-05-17 19:11:27",
+            "last_update": "2024-05-17 20:29:03",
             "name": "traefik",
             "recommended": false,
             "title": "Traefik",
@@ -35,6 +35,38 @@
             ],
             "icon_url": "https://truecharts.org/img/hotlink-ok/chart-icons/traefik.png"
         },
+        "brightsky": {
+            "app_readme": "<p><a href=\"https://brightsky.dev/\">Bright Sky</a> is an open-source API that provides easy access to weather data from the Deutscher Wetterdienst (DWD).</p>",
+            "categories": [
+                "jansauer"
+            ],
+            "description": "Bright Sky is an open-source api for weather information.",
+            "healthy": true,
+            "healthy_error": null,
+            "home": "https://brightsky.dev/",
+            "location": "/__w/truenas-apps/truenas-apps/charts/brightsky",
+            "latest_version": "0.0.1",
+            "latest_app_version": "2.1.9",
+            "latest_human_version": "2.1.9_0.0.1",
+            "last_update": "2024-05-17 20:34:05",
+            "name": "brightsky",
+            "recommended": false,
+            "title": "Brightsky",
+            "maintainers": [
+                {
+                    "name": "Jan Sauer",
+                    "url": "https://jansauer.de/",
+                    "email": "jan@jansauer.de"
+                }
+            ],
+            "tags": [],
+            "screenshots": [],
+            "sources": [
+                "https://github.com/jdemaeyer/brightsky/",
+                "https://github.com/jdemaeyer/brightsky-infrastructure/"
+            ],
+            "icon_url": "https://brightsky.dev/favicon.svg"
+        },
         "grafana": {
             "app_readme": "<p><a href=\"https://grafana.com/oss/grafana/\">Grafana</a> is an open-source analytics and monitoring platform that allows users to visualize and analyze data from various sources through customizable dashboards.</p>",
             "categories": [
@@ -48,7 +80,7 @@
             "latest_version": "0.0.4",
             "latest_app_version": "3.0.0",
             "latest_human_version": "3.0.0_0.0.4",
-            "last_update": "2024-05-17 19:09:54",
+            "last_update": "2024-05-17 20:29:03",
             "name": "grafana",
             "recommended": false,
             "title": "Grafana",
