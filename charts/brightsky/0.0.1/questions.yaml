@@ -1,0 +1,27 @@
+groups:
+  - name: Bright Sky Configuration
+    description: Configure Bright Sky
+  - name: Storage Configuration
+    description: Configure Storage for Bright Sky
+
+portals:
+  open:
+    protocols:
+      - "http"
+    host:
+      - "$node_ip"
+    ports:
+      - "9000"
+    path: "/dashboard"
+
+questions:
+
+  - variable: TZ
+    group: Bright Sky Configuration
+    label: Timezone
+    schema:
+      type: string
+      default: Etc/UTC
+      required: true
+      $ref:
+        - definitions/timezone
