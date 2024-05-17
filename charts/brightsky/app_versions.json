@@ -1,20 +1,20 @@
 {
-    "0.0.1": {
+    "0.0.2": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/truenas-apps/truenas-apps/charts/brightsky/0.0.1",
-        "last_update": "2024-05-17 20:34:05",
+        "location": "/__w/truenas-apps/truenas-apps/charts/brightsky/0.0.2",
+        "last_update": "2024-05-17 21:07:23",
         "required_features": [
             "definitions/timezone"
         ],
-        "human_version": "2.1.9_0.0.1",
-        "version": "0.0.1",
+        "human_version": "2.1.9_0.0.2",
+        "version": "0.0.2",
         "chart_metadata": {
             "apiVersion": "v2",
             "type": "application",
             "name": "brightsky",
-            "version": "0.0.1",
+            "version": "0.0.2",
             "appVersion": "2.1.9",
             "kubeVersion": ">=1.16.0-0",
             "description": "Bright Sky is an open-source api for weather information.",
@@ -82,6 +82,24 @@
                             {
                                 "value": "Asia/Saigon",
                                 "description": "'Asia/Saigon' timezone"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "variable": "postgres",
+                    "group": "Storage Configuration",
+                    "label": "",
+                    "schema": {
+                        "type": "dict",
+                        "attrs": [
+                            {
+                                "variable": "hostPath",
+                                "label": "Host Path",
+                                "description": "The host path to use for storage.",
+                                "schema": {
+                                    "type": "hostpath"
+                                }
                             }
                         ]
                     }
