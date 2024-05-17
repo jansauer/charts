@@ -1,0 +1,39 @@
+groups:
+  - name: Traefik Configuration
+    description: Configure Traefik
+  - name: Network Configuration
+    description: Configure Network for Grafana
+
+portals:
+  open:
+    protocols:
+      - "http"
+    host:
+      - "$node_ip"
+    ports:
+      - "9000"
+    path: "/dashboard"
+
+questions:
+
+  - variable: TZ
+    group: Traefik Configuration
+    label: Timezone
+    schema:
+      type: string
+      default: Etc/UTC
+      required: true
+      $ref:
+        - definitions/timezone
+
+  - variable: grafanaStorage
+    group: Network Configuration
+    label: ""
+    schema:
+      type: dict
+      attrs:
+        - variable: dataHostPath
+          label: Host Path
+          schema:
+            type: hostpath
+            required: true

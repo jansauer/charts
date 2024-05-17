@@ -1,0 +1,23 @@
+apiVersion: v2
+type: application
+name: grafana
+version: 0.0.1
+appVersion: "3.0.0"
+kubeVersion: '>=1.16.0-0'
+description: Grafana is a analytics and monitoring platform.
+home: https://traefik.io/
+icon: https://truecharts.org/img/hotlink-ok/chart-icons/traefik.png
+maintainers:
+  - name: Jan Sauer
+    url: https://jansauer.de/
+    email: jan@jansauer.de
+sources:
+  - https://github.com/truecharts/charts/tree/master/charts/enterprise/traefik
+  - https://github.com/traefik/traefik
+  - https://github.com/traefik/traefik-helm-chart
+  - https://traefik.io/
+  - https://doc.traefik.io/traefik/
+keywords:
+  - jansauer
+  - traefik
+  - ingress
