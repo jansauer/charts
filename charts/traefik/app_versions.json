@@ -1,20 +1,20 @@
 {
-    "1.0.33": {
+    "1.0.34": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/truenas-apps/truenas-apps/charts/traefik/1.0.33",
-        "last_update": "2024-05-17 17:12:16",
+        "location": "/__w/truenas-apps/truenas-apps/charts/traefik/1.0.34",
+        "last_update": "2024-05-17 17:26:22",
         "required_features": [
             "definitions/timezone"
         ],
-        "human_version": "3.0.0_1.0.33",
-        "version": "1.0.33",
+        "human_version": "3.0.0_1.0.34",
+        "version": "1.0.34",
         "chart_metadata": {
             "apiVersion": "v2",
             "type": "application",
             "name": "traefik",
-            "version": "1.0.33",
+            "version": "1.0.34",
             "appVersion": "3.0.0",
             "kubeVersion": ">=1.16.0-0",
             "description": "Traefik is a flexible reverse proxy and Ingress Provider.",
