@@ -1,5 +1,1 @@
-def update_catalog_file(location: str) -> None:
-catalog_file_path = os.path.join(location, CACHED_CATALOG_FILE_NAME)
-catalog_data, versions_data = get_trains(location)
-validate_train_data(catalog_data)
-validate_versions_data(versions_data)
+[Traefik](https://traefik.io/) is a modern HTTP reverse proxy and load balancer made to deploy microservices with ease.
