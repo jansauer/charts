@@ -17,13 +17,16 @@ spec:
       automountServiceAccountToken: false
       containers:
         - name: postgres
-          image: {{ .Values.postgres.image.repository }}:{{ .Values.postgres.image.tag }}
+          image: "{{ .Values.postgres.image.repository }}:{{ .Values.postgres.image.tag }}"
           env:
             - name: POSTGRES_DB
-              value:
+              value: brightsky
             - name: POSTGRES_USER
-              value:
+              value: brightsky
             - name: POSTGRES_PASSWORD
+              value: brightsky
+            - name: TZ
+              value: "{{ .Values.TZ }}"
           ports:
             - name: postgressql
               containerPort: 5432
