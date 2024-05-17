@@ -1,20 +1,20 @@
 {
-    "0.0.6": {
+    "0.0.7": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/truenas-apps/truenas-apps/charts/brightsky/0.0.6",
-        "last_update": "2024-05-17 22:48:25",
+        "location": "/__w/truenas-apps/truenas-apps/charts/brightsky/0.0.7",
+        "last_update": "2024-05-17 22:54:41",
         "required_features": [
             "definitions/timezone"
         ],
-        "human_version": "2.1.9_0.0.6",
-        "version": "0.0.6",
+        "human_version": "2.1.9_0.0.7",
+        "version": "0.0.7",
         "chart_metadata": {
             "apiVersion": "v2",
             "type": "application",
             "name": "brightsky",
-            "version": "0.0.6",
+            "version": "0.0.7",
             "appVersion": "2.1.9",
             "kubeVersion": ">=1.16.0-0",
             "description": "Bright Sky is an open-source api for weather information.",
