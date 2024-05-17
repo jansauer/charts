@@ -28,12 +28,12 @@ questions:
 
   - variable: postgres
     group: Storage Configuration
-    label: ""
+    label: "Postgres"
     schema:
       type: dict
       attrs:
         - variable: hostPath
-          label: Host Path
+          label: Postgres Host Path
           description: The host path to use for storage.
           schema:
             type: hostpath
