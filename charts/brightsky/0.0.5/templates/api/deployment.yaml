@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -22,6 +23,8 @@ spec:
           env:
             - name: BRIGHTSKY_DATABASE_URL
               value: postgres://brightsky:brightsky@postgres.{{ .Release.Namespace }}.svc.cluster.local:5432
+            - name: TZ
+              value: "{{ .Values.TZ }}"
           ports:
             - name: http
               containerPort: 5000
