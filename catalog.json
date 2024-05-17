@@ -13,7 +13,7 @@
             "latest_version": "1.0.31",
             "latest_app_version": "3.0.0",
             "latest_human_version": "3.0.0_1.0.31",
-            "last_update": "2024-05-17 11:53:40",
+            "last_update": "2024-05-17 12:13:08",
             "name": "traefik",
             "recommended": false,
             "title": "Traefik",
@@ -36,19 +36,19 @@
             "icon_url": "https://truecharts.org/img/hotlink-ok/chart-icons/traefik.png"
         },
         "grafana": {
-            "app_readme": "<p><a href=\"https://traefik.io/\">Traefik</a> is a modern HTTP reverse proxy and load balancer made to deploy microservices with ease.</p>",
+            "app_readme": "<p><a href=\"https://grafana.com/oss/grafana/\">Grafana</a> is an open-source analytics and monitoring platform that allows users to visualize and analyze data from various sources through customizable dashboards.</p>",
             "categories": [
                 "jansauer"
             ],
             "description": "Grafana is a analytics and monitoring platform.",
             "healthy": true,
             "healthy_error": null,
-            "home": "https://traefik.io/",
+            "home": "https://grafana.com/oss/grafana/",
             "location": "/__w/truenas-apps/truenas-apps/charts/grafana",
-            "latest_version": "0.0.1",
+            "latest_version": "0.0.2",
             "latest_app_version": "3.0.0",
-            "latest_human_version": "3.0.0_0.0.1",
-            "last_update": "2024-05-17 11:55:10",
+            "latest_human_version": "3.0.0_0.0.2",
+            "last_update": "2024-05-17 12:14:45",
             "name": "grafana",
             "recommended": false,
             "title": "Grafana",
@@ -68,7 +68,7 @@
                 "https://traefik.io/",
                 "https://doc.traefik.io/traefik/"
             ],
-            "icon_url": "https://truecharts.org/img/hotlink-ok/chart-icons/traefik.png"
+            "icon_url": "https://truecharts.org/img/hotlink-ok/chart-icons/grafana.webp"
         }
     },
     "test": {}

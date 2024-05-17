@@ -1,25 +1,25 @@
 {
-    "0.0.1": {
+    "0.0.2": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/truenas-apps/truenas-apps/charts/grafana/0.0.1",
-        "last_update": "2024-05-17 11:55:10",
+        "location": "/__w/truenas-apps/truenas-apps/charts/grafana/0.0.2",
+        "last_update": "2024-05-17 12:14:45",
         "required_features": [
             "definitions/timezone"
         ],
-        "human_version": "3.0.0_0.0.1",
-        "version": "0.0.1",
+        "human_version": "3.0.0_0.0.2",
+        "version": "0.0.2",
         "chart_metadata": {
             "apiVersion": "v2",
             "type": "application",
             "name": "grafana",
-            "version": "0.0.1",
+            "version": "0.0.2",
             "appVersion": "3.0.0",
             "kubeVersion": ">=1.16.0-0",
             "description": "Grafana is a analytics and monitoring platform.",
-            "home": "https://traefik.io/",
-            "icon": "https://truecharts.org/img/hotlink-ok/chart-icons/traefik.png",
+            "home": "https://grafana.com/oss/grafana/",
+            "icon": "https://truecharts.org/img/hotlink-ok/chart-icons/grafana.webp",
             "maintainers": [
                 {
                     "name": "Jan Sauer",
@@ -36,8 +36,7 @@
             ],
             "keywords": [
                 "jansauer",
-                "traefik",
-                "ingress"
+                "monitoring"
             ]
         },
         "app_metadata": null,
@@ -48,8 +47,8 @@
                     "description": "Configure Traefik"
                 },
                 {
-                    "name": "Network Configuration",
-                    "description": "Configure Network for Grafana"
+                    "name": "Storage Configuration",
+                    "description": "Configure Storage for Grafana"
                 }
             ],
             "portals": {
@@ -92,7 +91,7 @@
                 },
                 {
                     "variable": "grafanaStorage",
-                    "group": "Network Configuration",
+                    "group": "Storage Configuration",
                     "label": "",
                     "schema": {
                         "type": "dict",
@@ -110,8 +109,8 @@
                 }
             ]
         },
-        "app_readme": "<p><a href=\"https://traefik.io/\">Traefik</a> is a modern HTTP reverse proxy and load balancer made to deploy microservices with ease.</p>",
-        "detailed_readme": "<h1>Custom Traefik</h1>\n<p><a href=\"https://traefik.io/\">Traefik</a> is a modern HTTP reverse proxy and load balancer made to deploy microservices with ease.</p>",
+        "app_readme": "<p><a href=\"https://grafana.com/oss/grafana/\">Grafana</a> is an open-source analytics and monitoring platform that allows users to visualize and analyze data from various sources through customizable dashboards.</p>",
+        "detailed_readme": "<h1>Custom Grafana</h1>\n<p><a href=\"https://grafana.com/oss/grafana/\">Grafana</a> is an open-source analytics and monitoring platform that allows users to visualize and analyze data from various sources through customizable dashboards.</p>",
         "changelog": null
     }
 }
