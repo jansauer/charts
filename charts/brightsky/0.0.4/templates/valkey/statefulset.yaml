@@ -44,7 +44,7 @@ spec:
             failureThreshold: 3
             successThreshold: 1
           resources:
-            limits: {}
             requests:
               cpu: 100m
               memory: 256Mi
+            limits: {}

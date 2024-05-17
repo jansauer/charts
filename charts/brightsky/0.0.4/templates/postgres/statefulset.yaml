@@ -53,10 +53,10 @@ spec:
             failureThreshold: 3
             successThreshold: 1
           resources:
-            limits: {}
             requests:
               cpu: 250m
               memory: 256Mi
+            limits: {}
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
               name: data
