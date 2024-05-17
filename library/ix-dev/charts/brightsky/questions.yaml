@@ -25,3 +25,15 @@ questions:
       required: true
       $ref:
         - definitions/timezone
+
+  - variable: postgres
+    group: Storage Configuration
+    label: ""
+    schema:
+      type: dict
+      attrs:
+        - variable: hostPath
+          label: Host Path
+          description: The host path to use for storage.
+          schema:
+            type: hostpath
