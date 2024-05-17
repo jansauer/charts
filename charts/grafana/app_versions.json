@@ -1,23 +1,23 @@
 {
-    "1.0.31": {
+    "0.0.1": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/truenas-apps/truenas-apps/charts/traefik/1.0.31",
-        "last_update": "2024-05-17 11:53:40",
+        "location": "/__w/truenas-apps/truenas-apps/charts/grafana/0.0.1",
+        "last_update": "2024-05-17 11:55:10",
         "required_features": [
             "definitions/timezone"
         ],
-        "human_version": "3.0.0_1.0.31",
-        "version": "1.0.31",
+        "human_version": "3.0.0_0.0.1",
+        "version": "0.0.1",
         "chart_metadata": {
             "apiVersion": "v2",
             "type": "application",
-            "name": "traefik",
-            "version": "1.0.31",
+            "name": "grafana",
+            "version": "0.0.1",
             "appVersion": "3.0.0",
             "kubeVersion": ">=1.16.0-0",
-            "description": "Traefik is a flexible reverse proxy and Ingress Provider.",
+            "description": "Grafana is a analytics and monitoring platform.",
             "home": "https://traefik.io/",
             "icon": "https://truecharts.org/img/hotlink-ok/chart-icons/traefik.png",
             "maintainers": [
@@ -48,12 +48,8 @@
                     "description": "Configure Traefik"
                 },
                 {
-                    "name": "ACME Configuration",
-                    "description": "Configure storage for Traefik"
-                },
-                {
                     "name": "Network Configuration",
-                    "description": "Configure Network for Traefik"
+                    "description": "Configure Network for Grafana"
                 }
             ],
             "portals": {
@@ -95,46 +91,17 @@
                     }
                 },
                 {
-                    "variable": "acmeServiceAccount",
-                    "group": "ACME Configuration",
-                    "label": "Google Service Account",
-                    "description": "Google access credentials used to manag.\n",
-                    "schema": {
-                        "type": "string",
-                        "default": ""
-                    }
-                },
-                {
-                    "variable": "acmeStorageHostPath",
-                    "group": "ACME Configuration",
-                    "label": "Host Path",
-                    "description": "The host path to use for storage.",
-                    "schema": {
-                        "type": "hostpath"
-                    }
-                },
-                {
-                    "variable": "traefikNetwork",
+                    "variable": "grafanaStorage",
                     "group": "Network Configuration",
                     "label": "",
                     "schema": {
                         "type": "dict",
                         "attrs": [
                             {
-                                "variable": "websecurePort",
-                                "label": "Websecure Port",
+                                "variable": "dataHostPath",
+                                "label": "Host Path",
                                 "schema": {
-                                    "type": "int",
-                                    "default": 443,
-                                    "required": true
-                                }
-                            },
-                            {
-                                "variable": "webPort",
-                                "label": "Web Port",
-                                "schema": {
-                                    "type": "int",
-                                    "default": 80,
+                                    "type": "hostpath",
                                     "required": true
                                 }
                             }
