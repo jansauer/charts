@@ -16,6 +16,22 @@ portals:
 
 questions:
 
+  - variable: minDate
+    group: Bright Sky Configuration
+    label: Minimal Date
+    schema:
+      type: string
+      default: "2018-01-01"
+      required: true
+
+  - variable: pollingInterval
+    group: Bright Sky Configuration
+    label: Crontab Polling Interval
+    schema:
+      type: string
+      default: "*/10"
+      required: true
+
   - variable: TZ
     group: Bright Sky Configuration
     label: Timezone
@@ -28,7 +44,7 @@ questions:
 
   - variable: postgres
     group: Storage Configuration
-    label: "Postgres"
+    label: ""
     schema:
       type: dict
       attrs:

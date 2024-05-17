@@ -2,6 +2,9 @@ image:
   repository: jdemaeyer/brightsky
   tag: v2.1.9
 
+minDate: "2018-01-01"
+pollingInterval: "*/10"
+
 valkey:
   image:
     repository: valkey/valkey
@@ -11,4 +14,6 @@ postgres:
   image:
     repository: postgres
     tag: 16.3-alpine3.19
-  hostPath: ''
+  hostPath: ""
+
+TZ: "Etc/UTC"
