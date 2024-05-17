@@ -1,7 +1,7 @@
 {
     "charts": {
         "traefik": {
-            "app_readme": "<p>def update_catalog_file(location: str) -&gt; None:\ncatalog_file_path = os.path.join(location, CACHED_CATALOG_FILE_NAME)\ncatalog_data, versions_data = get_trains(location)\nvalidate_train_data(catalog_data)\nvalidate_versions_data(versions_data)</p>",
+            "app_readme": "<p><a href=\"https://traefik.io/\">Traefik</a> is a modern HTTP reverse proxy and load balancer made to deploy microservices with ease.</p>",
             "categories": [
                 "jansauer"
             ],
@@ -10,10 +10,10 @@
             "healthy_error": null,
             "home": "https://traefik.io/",
             "location": "/__w/truenas-apps/truenas-apps/charts/traefik",
-            "latest_version": "1.0.30",
-            "latest_app_version": "2.11.2",
-            "latest_human_version": "2.11.2_1.0.30",
-            "last_update": "2024-05-17 10:20:36",
+            "latest_version": "1.0.31",
+            "latest_app_version": "3.0.0",
+            "latest_human_version": "3.0.0_1.0.31",
+            "last_update": "2024-05-17 11:02:42",
             "name": "traefik",
             "recommended": false,
             "title": "Traefik",
