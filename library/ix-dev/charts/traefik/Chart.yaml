@@ -1,7 +1,7 @@
 apiVersion: v2
 type: application
 name: traefik
-version: 1.0.31
+version: 1.0.32
 appVersion: "3.0.0"
 kubeVersion: '>=1.16.0-0'
 description: Traefik is a flexible reverse proxy and Ingress Provider.

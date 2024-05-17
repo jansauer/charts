@@ -1,7 +1,7 @@
 apiVersion: v2
 type: application
 name: grafana
-version: 0.0.3
+version: 0.0.4
 appVersion: "3.0.0"
 kubeVersion: '>=1.16.0-0'
 description: Grafana is a analytics and monitoring platform.
