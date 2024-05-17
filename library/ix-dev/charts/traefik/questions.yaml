@@ -4,6 +4,7 @@ groups:
   - name: ACME Configuration
     description: Configure storage for Traefik
   - name: Network Configuration
+    description: Configure Network for Traefik
 
 portals:
   open:
@@ -43,7 +44,6 @@ questions:
     description: The host path to use for storage.
     schema:
       type: hostpath
-#      required: true
 
   - variable: traefikNetwork
     group: Network Configuration
