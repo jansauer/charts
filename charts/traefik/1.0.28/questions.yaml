@@ -4,7 +4,6 @@ groups:
   - name: ACME Configuration
     description: Configure storage for Traefik
   - name: Network Configuration
-    description: Configure Network for Traefik
 
 portals:
   open:
@@ -15,7 +14,6 @@ portals:
     ports:
       - "9000"
     path: "/dashboard"
-
 
 questions:
 
@@ -38,21 +36,30 @@ questions:
       type: string
       default: ""
 
+
+  - variable: acmeStorageHostPath
+    group: ACME Configuration
+    label: Host Path
+    description: The host path to use for storage.
+    schema:
+      type: hostpath
+#      required: true
+
   - variable: traefikNetwork
     group: Network Configuration
     label: ""
     schema:
       type: dict
       attrs:
-        - variable: webPort
-          label: Web Port
-          schema:
-            type: int
-            default: 80
-            required: true
         - variable: websecurePort
           label: Websecure Port
           schema:
             type: int
             default: 443
+            required: true
+        - variable: webPort
+          label: Web Port
+          schema:
+            type: int
+            default: 80
             required: true
