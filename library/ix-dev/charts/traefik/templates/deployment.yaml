@@ -48,10 +48,10 @@ spec:
             - "--api.insecure"
             - "--metrics.prometheus"
             - "--ping"
-            - "--log.level=INFO"
+            - "--log.level=DEBUG"
           env:
-            - name: TEST_ACME
-              value: "{{ .Values.acmeStorageHostPath }}"
+            - name: GCE_SERVICE_ACCOUNT_FILE
+              value: /acme/personal-358315-6c8ec91782b3.json
           volumeMounts:
             - name: acme
               mountPath: /acme
