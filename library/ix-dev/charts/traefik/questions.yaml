@@ -17,7 +17,6 @@ portals:
     path: "/dashboard"
 
 questions:
-
   - variable: TZ
     group: Traefik Configuration
     label: Timezone
@@ -36,7 +35,6 @@ questions:
     schema:
       type: string
       default: ""
-
 
   - variable: acmeStorageHostPath
     group: ACME Configuration

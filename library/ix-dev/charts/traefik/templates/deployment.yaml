@@ -3,12 +3,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: traefik
-  labels:
-    app: {{ template "fullname" . }}
-    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
-    release: {{ .Release.Name | quote }}
-    heritage: {{ .Release.Service | quote }}
-    version: {{ .Chart.Version }}
 spec:
   replicas: 1
   selector:
@@ -17,16 +11,12 @@ spec:
   template:
     metadata:
       labels:
-        provider: fabric8
         app: {{ template "fullname" . }}
-        chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
-        release: {{ .Release.Name | quote }}
-        heritage: {{ .Release.Service | quote }}
     spec:
       serviceAccountName: traefik
       containers:
         - name: traefik
-          image: 'traefik:v3.0.0'
+          image: "traefik:v3.0.0"
           args:
             - "--global.checknewversion=false"
             - "--global.sendanonymoususage=false"
@@ -68,20 +58,20 @@ spec:
             httpGet:
               path: /ping
               port: 9000
-            failureThreshold: 1
             initialDelaySeconds: 10
             periodSeconds: 10
+            timeoutSeconds: 1
+            failureThreshold: 3
             successThreshold: 1
-            timeoutSeconds: 2
           livenessProbe:
             httpGet:
               path: /ping
               port: 9000
-            failureThreshold: 3
             initialDelaySeconds: 10
             periodSeconds: 10
+            timeoutSeconds: 1
+            failureThreshold: 3
             successThreshold: 1
-            timeoutSeconds: 2
           securityContext:
             capabilities:
               drop: [ALL]
