@@ -1,5 +1,5 @@
-acmeServiceAccount: ''
-acmeStorageHostPath: ''
+acmeServiceAccount: ""
+acmeStorageHostPath: ""
 
 traefikNetwork:
   webPort: 80
