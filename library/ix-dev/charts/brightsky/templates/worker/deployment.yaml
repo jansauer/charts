@@ -6,9 +6,9 @@ spec:
   selector:
     matchLabels:
       app.kubernetes.io/component: worker
+  replicas: {{ .Values.workerReplicas }}
   strategy:
     type: Recreate
-  replicas: 1
   revisionHistoryLimit: 2
   template:
     metadata:

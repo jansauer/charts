@@ -1,7 +1,7 @@
 apiVersion: v2
 type: application
 name: brightsky
-version: 0.0.8
+version: 0.0.9
 appVersion: 2.1.9
 kubeVersion: ">=1.16.0-0"
 description: Bright Sky is an open-source api for weather information.
