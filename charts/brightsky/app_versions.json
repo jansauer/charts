@@ -1,20 +1,20 @@
 {
-    "0.0.7": {
+    "0.0.8": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/truenas-apps/truenas-apps/charts/brightsky/0.0.7",
-        "last_update": "2024-05-18 11:31:01",
+        "location": "/__w/truenas-apps/truenas-apps/charts/brightsky/0.0.8",
+        "last_update": "2024-05-19 10:41:53",
         "required_features": [
             "definitions/timezone"
         ],
-        "human_version": "2.1.9_0.0.7",
-        "version": "0.0.7",
+        "human_version": "2.1.9_0.0.8",
+        "version": "0.0.8",
         "chart_metadata": {
             "apiVersion": "v2",
             "type": "application",
             "name": "brightsky",
-            "version": "0.0.7",
+            "version": "0.0.8",
             "appVersion": "2.1.9",
             "kubeVersion": ">=1.16.0-0",
             "description": "Bright Sky is an open-source api for weather information.",
@@ -40,12 +40,16 @@
         "schema": {
             "groups": [
                 {
-                    "name": "Bright Sky Configuration",
+                    "name": "Main Configuration",
                     "description": "Configure Bright Sky"
                 },
                 {
                     "name": "Storage Configuration",
                     "description": "Configure Storage for Bright Sky"
+                },
+                {
+                    "name": "Ingress Configuration",
+                    "description": "Configure Ingress for Bright Sky"
                 }
             ],
             "portals": {
@@ -65,7 +69,7 @@
             "questions": [
                 {
                     "variable": "minDate",
-                    "group": "Bright Sky Configuration",
+                    "group": "Main Configuration",
                     "label": "Minimal Date",
                     "schema": {
                         "type": "string",
@@ -75,7 +79,7 @@
                 },
                 {
                     "variable": "pollingInterval",
-                    "group": "Bright Sky Configuration",
+                    "group": "Main Configuration",
                     "label": "Crontab Polling Interval",
                     "schema": {
                         "type": "string",
@@ -84,8 +88,18 @@
                     }
                 },
                 {
+                    "variable": "workerReplicas",
+                    "group": "Main Configuration",
+                    "label": "Number of workers replicas",
+                    "schema": {
+                        "type": "int",
+                        "default": 1,
+                        "required": true
+                    }
+                },
+                {
                     "variable": "TZ",
-                    "group": "Bright Sky Configuration",
+                    "group": "Main Configuration",
                     "label": "Timezone",
                     "schema": {
                         "type": "string",
@@ -122,6 +136,14 @@
                                 }
                             }
                         ]
+                    }
+                },
+                {
+                    "variable": "ingressHost",
+                    "group": "Ingress Configuration",
+                    "label": "Ingress Rule Hostname",
+                    "schema": {
+                        "type": "string"
                     }
                 }
             ]
