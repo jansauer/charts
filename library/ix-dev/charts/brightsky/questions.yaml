@@ -6,16 +6,6 @@ groups:
   - name: Ingress Configuration
     description: Configure Ingress for Bright Sky
 
-portals:
-  open:
-    protocols:
-      - "http"
-    host:
-      - "$node_ip"
-    ports:
-      - "9000"
-    path: "/dashboard"
-
 questions:
   - variable: minDate
     group: Main Configuration
@@ -62,9 +52,21 @@ questions:
           description: The host path to use for storage.
           schema:
             type: hostpath
+            required: true
 
   - variable: ingressHost
     group: Ingress Configuration
     label: Ingress Rule Hostname
     schema:
       type: string
+      required: true
+
+portals:
+  open:
+    protocols:
+      - "https"
+    host:
+      - "$variable-ingressHost"
+    ports:
+      - "443"
+    path: "/"
