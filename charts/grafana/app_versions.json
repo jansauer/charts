@@ -4,7 +4,7 @@
         "supported": true,
         "healthy_error": null,
         "location": "/__w/truenas-apps/truenas-apps/charts/grafana/0.0.4",
-        "last_update": "2024-05-19 10:59:45",
+        "last_update": "2024-05-19 11:13:06",
         "required_features": [
             "definitions/timezone"
         ],
