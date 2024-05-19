@@ -1,4 +1,3 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -19,7 +18,7 @@ spec:
       containers:
         - name: worker
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          args: ['--migrate', 'work']
+          args: ["--migrate", "work"]
           env:
             - name: BRIGHTSKY_DATABASE_URL
               value: "postgres://brightsky:brightsky@postgres.{{ .Release.Namespace }}.svc.cluster.local:5432"
