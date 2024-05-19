@@ -4,7 +4,7 @@
         "supported": true,
         "healthy_error": null,
         "location": "/__w/truenas-apps/truenas-apps/charts/traefik/1.0.39",
-        "last_update": "2024-05-19 10:40:21",
+        "last_update": "2024-05-19 10:59:45",
         "required_features": [
             "definitions/timezone"
         ],
