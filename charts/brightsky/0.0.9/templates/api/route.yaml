@@ -6,7 +6,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`brightsky.jansauer.dev`)
+    - match: Host(`{{ .Values.ingressHost }}`)
       kind: Rule
       services:
         - name: api
