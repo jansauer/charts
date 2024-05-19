@@ -1,4 +1,3 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -19,7 +18,7 @@ spec:
       containers:
         - name: api
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          args: ['serve', '--bind', '0.0.0.0:5000']
+          args: ["serve", "--bind", "0.0.0.0:5000"]
           env:
             - name: BRIGHTSKY_DATABASE_URL
               value: postgres://brightsky:brightsky@postgres.{{ .Release.Namespace }}.svc.cluster.local:5432
@@ -31,7 +30,7 @@ spec:
           startupProbe:
             httpGet:
               port: http
-            initialDelaySeconds: 30
+            initialDelaySeconds: 10
             periodSeconds: 10
             timeoutSeconds: 1
             failureThreshold: 3
@@ -39,7 +38,7 @@ spec:
           livenessProbe:
             httpGet:
               port: http
-            initialDelaySeconds: 30
+            initialDelaySeconds: 10
             periodSeconds: 10
             timeoutSeconds: 1
             failureThreshold: 3

@@ -1,8 +1,10 @@
 groups:
-  - name: Bright Sky Configuration
+  - name: Main Configuration
     description: Configure Bright Sky
   - name: Storage Configuration
     description: Configure Storage for Bright Sky
+  - name: Ingress Configuration
+    description: Configure Ingress for Bright Sky
 
 portals:
   open:
@@ -15,9 +17,8 @@ portals:
     path: "/dashboard"
 
 questions:
-
   - variable: minDate
-    group: Bright Sky Configuration
+    group: Main Configuration
     label: Minimal Date
     schema:
       type: string
@@ -25,15 +26,23 @@ questions:
       required: true
 
   - variable: pollingInterval
-    group: Bright Sky Configuration
+    group: Main Configuration
     label: Crontab Polling Interval
     schema:
       type: string
       default: "*/10"
       required: true
 
+  - variable: workerReplicas
+    group: Main Configuration
+    label: Number of workers replicas
+    schema:
+      type: int
+      default: 1
+      required: true
+
   - variable: TZ
-    group: Bright Sky Configuration
+    group: Main Configuration
     label: Timezone
     schema:
       type: string
@@ -53,3 +62,9 @@ questions:
           description: The host path to use for storage.
           schema:
             type: hostpath
+
+  - variable: ingressHost
+    group: Ingress Configuration
+    label: Ingress Rule Hostname
+    schema:
+      type: string

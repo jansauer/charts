@@ -4,6 +4,7 @@ image:
 
 minDate: "2018-01-01"
 pollingInterval: "*/10"
+workerReplicas: 1
 
 valkey:
   image:
@@ -17,3 +18,5 @@ postgres:
   hostPath: ""
 
 TZ: "Etc/UTC"
+
+ingressHost: ""
